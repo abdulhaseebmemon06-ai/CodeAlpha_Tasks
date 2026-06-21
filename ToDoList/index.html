@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow Pro</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <i class="fa-solid fa-layer-group"></i>
+            <span>HasibFlow Pro</span>
+        </div>
+
+        <nav>
+            <a href="#" class="active">
+                <i class="fa-solid fa-list-check"></i>
+                Dashboard
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-chart-simple"></i>
+                Productivity
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <header class="header">
+            <div>
+                <h1>Task Dashboard</h1>
+                <p>Manage your daily tasks efficiently.</p>
+            </div>
+        </header>
+
+        <!-- Stats -->
+        <section class="stats">
+
+            <div class="card">
+                <h3>Total Tasks</h3>
+                <span id="totalTasks">0</span>
+            </div>
+
+            <div class="card">
+                <h3>Completed</h3>
+                <span id="completedTasks">0</span>
+            </div>
+
+            <div class="card">
+                <h3>Pending</h3>
+                <span id="pendingTasks">0</span>
+            </div>
+
+            <div class="card">
+                <h3>Progress</h3>
+                <span id="progressPercent">0%</span>
+            </div>
+
+        </section>
+
+        <!-- Progress -->
+        <section class="progress-section">
+            <div class="progress-bar">
+                <div id="progressFill"></div>
+            </div>
+        </section>
+
+        <!-- Add Task -->
+        <section class="task-form">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter task..."
+            >
+
+            <input
+                type="date"
+                id="dueDate"
+            >
+
+            <select id="priority">
+                <option class="abc" value="High">High Priority</option>
+                <option class="abc" value="Medium">Medium Priority</option>
+                <option class="abc" value="Low">Low Priority</option>
+            </select>
+
+            <button id="addTaskBtn">
+                <i class="fa-solid fa-plus"></i>
+                Add Task
+            </button>
+
+        </section>
+
+        <!-- Search -->
+        <section class="search-filter">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search tasks..."
+            >
+
+            <select id="filterTasks">
+                <option class="abc" value="all">All Tasks</option>
+                <option class="abc" value="completed">Completed</option>
+                <option class="abc" value="pending">Pending</option>
+            </select>
+
+        </section>
+
+        <!-- Task List -->
+        <section class="tasks-container">
+
+            <ul id="taskList">
+
+            </ul>
+
+            <div id="emptyState">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <p>No tasks added yet.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
